@@ -17,5 +17,6 @@ Nurahmadie <nurahmadie@gmail.com>
 Current status:
 
 
-.. image:: https://travis-ci.org/fudanchii/archie.png?branch=master   :target: https://travis-ci.org/fudanchii/archie
+.. image:: https://travis-ci.org/fudanchii/archie.png?branch=master
+    :target: https://travis-ci.org/fudanchii/archie
 
