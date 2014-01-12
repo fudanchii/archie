@@ -1,0 +1,2 @@
+
+def Restore(cfg): pass

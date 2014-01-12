@@ -1,0 +1,6 @@
+[dirs]
+target=/tmp/another
+backup-dir=/tmp/backupdir
+
+[rcfiles]
+a.rc=%(target)s/a.rc

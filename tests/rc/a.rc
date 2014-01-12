@@ -1,0 +1,11 @@
+[dirs]
+target=/tmp/test
+backup-dir=%(target)s/.rc-backup
+
+[rcfiles]
+bashrc=
+profile=
+gitconfig=
+hgrc=%(target)s/hgrc
+vimrc=%(target)s/another/dir/oyay
+hgignore=%(target)s/muhaha/
