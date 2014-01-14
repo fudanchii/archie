@@ -17,7 +17,7 @@ setup(
         'Environment :: Console',
         'Intended Audience :: System Administrators',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT',
+        'License :: OSI Approved :: MIT License',
         'Operating System :: POSIX',
         'Programming Language :: Python'
     ]
