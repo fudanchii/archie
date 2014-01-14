@@ -11,5 +11,14 @@ setup(
     author_email = 'nurahmadie@gmail.com',
     url          = 'http://bitbucket.org/fudanchii/archie',
     packages     = ['archie', 'archie.handlers'],
-    scripts      = ['arc']
-    )
+    scripts      = ['arc'],
+    classifiers=[
+        'Development Status :: 3 - Alpha',
+        'Environment :: Console',
+        'Intended Audience :: System Administrators',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT',
+        'Operating System :: POSIX',
+        'Programming Language :: Python'
+    ]
+)
