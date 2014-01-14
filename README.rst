@@ -25,7 +25,7 @@ Options:
     -h, --help                                  Show this help.
     -t <target>, --target=<target>              Target directory to install to.
                                                 (default is /tmp)
-    -v, --version                               Show program version.`
+    -v, --version                               Show program version.
 
 
 a.rc file
