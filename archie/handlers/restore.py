@@ -9,7 +9,7 @@ def find_backup(cfg):
     for rc in rcfiles:
         backup = helpers.get_backupfile(cfg, rc)
         rcfile = helpers.get_rcfile(cfg, rc)
-        if tarfile.is_tarfile(backup):
+        if os.path.lexists(backup) and tarfile.is_tarfile(backup):
             files.append((backup, rcfile))
     return files
 
