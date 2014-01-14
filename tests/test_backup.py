@@ -15,7 +15,7 @@ def setup(targetdir, backupdir):
 def config(request):
     myargs = args.copy()
     myargs['PACKAGE'] = 'tests/rc'
-    cfg = archie.configuration.Config('tests/rc/another-config.rc', args)
+    cfg = archie.configuration.Config('tests/rc/another-config.rc', myargs)
     request.addfinalizer( \
         setup(cfg.get('dirs', 'target'), cfg.get('dirs', 'backup-dir')))
     return cfg
@@ -33,4 +33,4 @@ class TestBackup:
         files = archie.backup.Backup(config, rcfiles)
         assert len(files) == 1
         assert os.path.lexists('/tmp/backupdir') and os.path.isdir('/tmp/backupdir')
-        assert os.path.lexists('/tmp/backupdir/a.rc.tgz')
+        assert os.path.lexists('/tmp/backupdir/tests_rc-a.rc.tgz')

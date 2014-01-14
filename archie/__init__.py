@@ -12,6 +12,9 @@ def main(args):
     cfg = Config(configfile, args)
 
     if args['install']:
-        cmd.Install(cfg)
+        result = cmd.Install(cfg)
     elif args['restore']:
-        cmd.Restore(cfg)
+        result = cmd.Restore(cfg)
+
+    for item in result:
+        print(item)
