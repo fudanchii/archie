@@ -17,7 +17,6 @@ def Backup(cfg, rcfiles):
         orifile = helpers.get_rcfile(cfg, rc)
         if os.path.lexists(orifile) and not os.path.islink(orifile):
             fname = os.path.basename(orifile)
-            archivename = os.path.join(backupdir, \
-                '%s-%s.tgz' % (cfg.get('args', 'PACKAGE').replace('/', '_'), fname))
+            archivename = helpers.get_backupfile(cfg, rc)
             backupfiles.append(gzip_then_store(orifile, archivename))
     return backupfiles

@@ -8,6 +8,12 @@ def ensure_dir_exists(path):
             pass
         else: raise
 
+def get_backupfile(cfg, key):
+    fname = os.path.basename(get_rcfile(cfg, key))
+    backupfile = os.path.join(cfg.get('dirs', 'backup-dir'), \
+        '%s-%s.tgz' % (cfg.args['PACKAGE'].replace('/', '_'), fname))
+    return backupfile
+
 def get_rcfile(cfg, key):
     rcfile = cfg.get('rcfiles', key)
     if rcfile and rcfile[-1] != '/':
