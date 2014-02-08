@@ -1,6 +1,6 @@
----
-image: stackbrew/ubuntu:12.04
+image: fudanchii/python
 script:
+  - pip install tox
   - tox
 notify:
   email:
