@@ -18,7 +18,7 @@ def gunzip_and_restore(cfg, backupfiles):
         if os.path.islink(rc):
             os.unlink(rc)
         with closing(tarfile.open(backup, 'r:gz')) as tar:
-            tar.extractall('/')
+            tar.extractall(path='/', filter='data')
     return backupfiles
 
 def Restore(cfg):

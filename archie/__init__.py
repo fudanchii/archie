@@ -3,7 +3,7 @@ from .configuration import Config
 from . import handlers as cmd
 
 
-VERSION = '0.0.3'
+VERSION = '0.0.4'
 APPNAME = 'archie'
 
 

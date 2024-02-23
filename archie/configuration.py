@@ -10,7 +10,7 @@ class Config:
             self.conf = SafeConfigParser(allow_no_value = True)
         except TypeError:
             self.conf = SafeConfigParser()
-        self.conf.readfp(open(configfile))
+        self.conf.read_file(open(configfile))
 
     def get(self, section, key):
         if section == 'args':

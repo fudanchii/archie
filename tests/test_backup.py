@@ -3,7 +3,7 @@ import os, \
 
 from fixtures import args
 
-def setup(targetdir, backupdir):
+def setup_dir(targetdir, backupdir):
     def teardown():
         shutil.rmtree(backupdir)
         shutil.rmtree(targetdir)
@@ -17,7 +17,7 @@ def config(request):
     myargs['PACKAGE'] = 'tests/rc'
     cfg = archie.configuration.Config('tests/rc/another-config.rc', myargs)
     request.addfinalizer( \
-        setup(cfg.get('dirs', 'target'), cfg.get('dirs', 'backup-dir')))
+        setup_dir(cfg.get('dirs', 'target'), cfg.get('dirs', 'backup-dir')))
     return cfg
 
 class TestBackup:

@@ -5,8 +5,8 @@ from fixtures import args
 
 
 def teardown():
-    shutil.rmtree('/tmp/another')
-    shutil.rmtree('/tmp/backupdir')
+    shutil.rmtree('/tmp/another', ignore_errors=True)
+    shutil.rmtree('/tmp/backupdir', ignore_errors=True)
 
 @pytest.fixture(scope='function')
 def config(request):
